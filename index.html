@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <script src="https://kit.fontawesome.com/9c2dbccb49.js" crossorigin="anonymous"></script>
+    <title>Aghnat's Personal Website</title>
+</head>
+
+<body>
+    <!-- Header my name and photo -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <i class="fa-solid fa-code" style="color: #e8ecf2; scale: 1.5;"></i>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#lt">Languages & Tools</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <i class="fas fa-regular fa-circle-xmark" style="color: #e1dcff;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" style="color: #e1dcff;" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p class="header-text-hello" id="hello-text">Hi, my name is</p>
+                <h1 style="color: var(--green);">Aghnat Hasya S</h1>
+                <p>I'm a <span id="year">first</span> year Computer Science student at IPB
+                    University with interests in Mobile and Web Development. I have a proficiency in Flutter for mobile
+                    apps development, and currently learning JavaScript for backend development.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Languages and tools -->
+    <div id="lt">
+        <div class="lt-container">
+            <h1 class="sub-title">Languages & Tools</h1>
+            <div class="lt-list">
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" />
+                    <h1 class="hide">Dart</h1>
+                </div>
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+                    <h1 class="hide">Flutter</h1>
+                </div>
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <h1 class="hide">JavaScript</h1>
+                </div>
+                <div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                    <h1 class="hide">NodeJs</h1>
+                </div>
+                <div style="grid-area: 2/2/2/2 ;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                    <h1 class="hide">Git</h1>
+                </div>
+                <div style="grid-area: 2/3/3/4 ;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+                    <h1 class="hide">PostgreSQL</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- projects -->
+    <div id="project">
+        <div class="project-container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="assets/project-images/s1.jpg" alt="">
+                    <div class="info">
+                        <h3>Budget Tracker</h3>
+                        <p>The app track your daily and monthly budget. Built using Flutter.</p>
+                        <a href="https://github.com/AghnatHs/budget_tracker" target="_blank">See More</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="assets/project-images/s2.jpg" alt="">
+                    <div class="info">
+                        <h3>TugasKu</h3>
+                        <p>A todo list app. Built using Flutter + Realm.</p>
+                        <a href="https://github.com/AghnatHs/TugasKu" target="_blank">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <h1>Contact</h1>
+            <a href="https://github.com/AghnatHs" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/aghnathasya/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/natt.hsy/" target="_blank"><i
+                    class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://linktr.ee/aghnaths" target="_blank"><i><img src="assets/images/Linktree_logo.svg" alt=""></i></a>
+        </div>
+
+    </div>
+</body>
+<script src="src/responsiveMenu.js"></script>
+<script src="src/yearAtUniversity.js"></script>
+<script src="src/hello.js"></script>
+
+</html>
