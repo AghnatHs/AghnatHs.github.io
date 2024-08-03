@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aghnat Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/9c2dbccb49.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <i class="fa-solid fa-code" style="color: #e8ecf2; scale: 1.5;" id="logo"></i>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skillsets">Skillsets</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- profile -->
+        <div class="content-profile" id="profile">
+            <img class="profile-photo" src="assets/images/photo-profile.png" alt="profile">
+            <div class="introduction">
+                <h1><span id="hello">Hi</span>, my name is <span class="name">Aghnat</span></h1>
+                <p><span id="year"></span> year computer science student at IPB University. I have a proficiency in Flutter
+                    for mobile apps development, and currently learning some web development too.</p>
+            </div>
+            <!-- <h1 style="position: absolute; right: 25%; top: 30%;">test</h1> -->
+        </div>
+
+        <!-- skillsets -->
+        <div class="content-skillsets" id="skillsets">
+            <h2 class="title">Skillsets</h2>
+            <div class="lists">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">Dart</h2>
+                        <h2 class="skill-level">Intermediate</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">Flutter</h2>
+                        <h2 class="skill-level">Intermediate</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">SQLite</h2>
+                        <h2 class="skill-level">Intermediate</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">JavaScript</h2>
+                        <h2 class="skill-level">Intermediate</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">NodeJs</h2>
+                        <h2 class="skill-level">Basic</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">HTML</h2>
+                        <h2 class="skill-level">Basic</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">CSS</h2>
+                        <h2 class="skill-level">Basic</h2>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" />
+                    <div class="container">
+                        <h2 class="skill-title">Git</h2>
+                        <h2 class="skill-level">Basic</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projects -->
+        <div class="content-projects" id="projects">
+            <h2 class="title">Projects</h2>
+            <div class="lists">
+                <div class="project">
+                    <div class="image-a">
+                        <img src="assets/images/project_fintekk.webp" alt="project1">
+                        <div class="cover">
+                            <a href="https://github.com/AghnatHs/FinTekk" target="_blank">See More</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h3>FinTekk</h3>
+                        <p>Daily financial management app. Reworked of my "Budget Tracker" app</p>
+                    </div>
+                    <div class="tech-stack">
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Riverpod</li>
+                            <li>SqLite</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="image-a">
+                        <img src="assets/images/project_tugasku.webp" alt="project1">
+                        <div class="cover">
+                            <a href="https://github.com/AghnatHs/TugasKu" target="_blank">See More</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h3>TugasKu</h3>
+                        <p>ToDo list app.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Riverpod</li>
+                            <li>Realm DB</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="image-a">
+                        <img src="assets/images/project_budget_tracker.webp" alt="project1">
+                        <div class="cover">
+                            <a href="https://github.com/AghnatHs/budget_tracker" target="_blank">See More</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h3>Budget Tracker</h3>
+                        <p>Daily financial management app.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Riverpod</li>
+                            <li>JSON</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="https://github.com/AghnatHs" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/aghnathasya/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/natt.hsy/" target="_blank"><i
+                        class="fa-brands fa-square-instagram"></i></a></li>
+        </ul>
+    </footer>
+</body>
+<script src="scripts/transparentHeader.js"></script>
+<script src="scripts/yearAtUniv.js"></script>
+<script src="scripts/hello.js"></script>
+
+</html>
