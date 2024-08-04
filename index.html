@@ -16,12 +16,14 @@
 <body>
     <header id="header">
         <i class="fa-solid fa-code" style="color: #e8ecf2; scale: 1.5;" id="logo"></i>
-        <ul>
+        <ul id="sidemenu">
             <li><a href="#profile">Profile</a></li>
             <li><a href="#skillsets">Skillsets</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-regular fa-circle-xmark" style="color: #e1dcff;" onclick="closemenu()"></i>
         </ul>
+        <i class="fas fa-solid fa-bars" style="color: #e1dcff;" onclick="openmenu()"></i>
     </header>
 
     <main>
@@ -30,7 +32,8 @@
             <img class="profile-photo" src="assets/images/photo-profile.png" alt="profile">
             <div class="introduction">
                 <h1><span id="hello">Hi</span>, my name is <span class="name">Aghnat</span></h1>
-                <p><span id="year"></span> year computer science student at IPB University. I have a proficiency in Flutter
+                <p><span id="year"></span> year computer science student at IPB University. I have a proficiency in
+                    Flutter
                     for mobile apps development, and currently learning some web development too.</p>
             </div>
             <!-- <h1 style="position: absolute; right: 25%; top: 30%;">test</h1> -->
@@ -111,7 +114,12 @@
                         </div>
                     </div>
                     <div class="info">
-                        <h3>FinTekk</h3>
+                        <h3>FinTekk
+                            <span class="external-link-mobile">
+                                <a href="https://github.com/AghnatHs/FinTekk" target="_blank"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </span>
+                        </h3>
                         <p>Daily financial management app. Reworked of my "Budget Tracker" app</p>
                     </div>
                     <div class="tech-stack">
@@ -130,7 +138,13 @@
                         </div>
                     </div>
                     <div class="info">
-                        <h3>TugasKu</h3>
+                        <h3>
+                            TugasKu
+                            <span class="external-link-mobile">
+                                <a href="https://github.com/AghnatHs/TugasKu" target="_blank"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </span>
+                        </h3>
                         <p>ToDo list app.</p>
                     </div>
                     <div class="tech-stack">
@@ -149,7 +163,13 @@
                         </div>
                     </div>
                     <div class="info">
-                        <h3>Budget Tracker</h3>
+                        <h3>
+                            Budget Tracker
+                            <span class="external-link-mobile">
+                                <a href="https://github.com/AghnatHs/budget_tracker" target="_blank"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </span>
+                        </h3>
                         <p>Daily financial management app.</p>
                     </div>
                     <div class="tech-stack">
@@ -179,5 +199,6 @@
 <script src="scripts/transparentHeader.js"></script>
 <script src="scripts/yearAtUniv.js"></script>
 <script src="scripts/hello.js"></script>
+<script src="scripts/responsiveMenu.js"></script>
 
 </html>

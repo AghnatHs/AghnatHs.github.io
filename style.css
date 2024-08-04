@@ -85,13 +85,48 @@ header ul li a:hover:after {
     width: 100%;
 }
 
+header .fas {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    #logo {
-        display: none;
+
+    header {
+        padding: 0px 25px;
     }
 
     header ul li a {
         font-size: 16px;
+    }
+
+    header .fas {
+        display: block;
+        font-size: 20px;
+    }
+
+    header ul {
+        background-color: var(--green);
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right .3s;
+    }
+
+    header ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    header ul li {
+        display: block;
+        margin: 25px;
     }
 }
 
@@ -137,6 +172,10 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
+    .content-profile {
+        height: 75vh;
+    }
+
     .content-profile .profile-photo {
         width: 200px;
         height: 200px;
@@ -350,6 +389,10 @@ main {
     display: block;
 }
 
+.content-projects .lists .project .info .external-link-mobile {
+   display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .content-projects .lists .project {
         width: 250px;
@@ -366,6 +409,23 @@ main {
     .content-projects .lists .project .tech-stack ul li {
        font-size: 14px;
     }
+
+    .content-projects .lists .project .image-a .cover {
+        display: none;
+    }
+
+    .content-projects .lists .project .info .external-link-mobile {
+        display: inline;
+    }
+
+    .content-projects .lists .project .info .external-link-mobile a {
+        /*  display: none; */
+        margin: 0px 10px;
+        font-size: 15px;
+        text-decoration: none;
+        color: var(--white);
+     }
+     
 }
 
 
