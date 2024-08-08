@@ -260,8 +260,13 @@ main {
     .content-skillsets {
         padding: 0px;
     }
+
+    .content-skillsets .lists {
+        padding: 10px;
+    }
+
     .content-skillsets .lists .skill {
-        width: 150px;
+        width: 130px;
         height: 40px;
         margin: 2px;
     }
