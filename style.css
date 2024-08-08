@@ -14,6 +14,7 @@
 html,
 body {
     scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
 }
 
 body {
@@ -31,11 +32,6 @@ hr {
     background-color: rgb(255, 6, 6);
 }
 
-/* header */
-.header-active {
-    background-color: rgba(20, 20, 20, 0.5);
-}
-
 header {
     position: fixed;
     top: 0;
@@ -46,7 +42,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 10vh;
+    height: 9vh;
     transition: .5s;
     z-index: 999;
 }
@@ -143,7 +139,6 @@ main {
 }
 
 .content-profile {
-    padding: 25px;
     padding-top: 10vh;
     padding-bottom: 0px;
     height: 100vh;
@@ -163,22 +158,30 @@ main {
     object-fit: cover;
     object-position: top center;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .content-profile .introduction {
     width: 700px;
 }
 
+.content-profile .introduction > * {
+    margin: 10px 0px;
+}
+
+.content-profile .introduction p {
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     .content-profile {
-        height: 75vh;
+        height: 85vh;
     }
 
     .content-profile .profile-photo {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
     
     .content-profile .introduction {
@@ -224,7 +227,6 @@ main {
     margin: 10px;
     width: 300px;
     height: 75px;
-    gap: 20px;
     transition: .5s;
 }
 
@@ -259,9 +261,9 @@ main {
         padding: 0px;
     }
     .content-skillsets .lists .skill {
-        width: 275px;
+        width: 150px;
         height: 40px;
-        gap: 0px;
+        margin: 2px;
     }
 
     .content-skillsets .lists .skill img {
