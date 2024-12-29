@@ -394,6 +394,7 @@ main {
 
 .content-projects .lists .project .info {
     display: block;
+    margin: 10px;
 }
 
 .content-projects .lists .project .info .external-link-mobile {
