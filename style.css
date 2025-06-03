@@ -414,6 +414,11 @@ main {
         font-size: 14px;
     }
 
+    .content-projects .lists .project .tech-stack ul {
+        flex-direction: column; /* stack items vertically */
+        font-size: 14px;
+    }
+
     .content-projects .lists .project .tech-stack ul li {
        font-size: 14px;
     }
