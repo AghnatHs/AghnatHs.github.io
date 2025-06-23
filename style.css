@@ -85,6 +85,86 @@ header .fas {
   display: none;
 }
 
+.content-experience {
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.content-experience .title {
+  color: var(--green);
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-experience .job {
+  background-color: #021d34;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--green);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content-experience .job-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.content-experience .job-company {
+  font-size: 16px;
+  color: var(--green);
+  margin-bottom: 5px;
+}
+
+.content-experience .job-duration {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.content-experience .job-details {
+  padding-left: 20px;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.content-experience .job-details li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-experience .job {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .content-experience .title {
+    font-size: 24px;
+  }
+
+  .content-experience .job-title {
+    font-size: 16px;
+  }
+
+  .content-experience .job-duration {
+    font-size: 12px;
+  }
+
+  .content-experience .job-details {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   header {
     padding: 0px 25px;
@@ -170,7 +250,7 @@ main {
 }
 
 .content-profile .introduction p {
-  text-align: center;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 600px) {
