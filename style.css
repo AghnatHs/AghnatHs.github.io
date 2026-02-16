@@ -100,14 +100,33 @@ header .fas {
   text-align: center;
 }
 
+.content-experience > a {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 24px;
+  border: 2px solid var(--green);
+  border-radius: 25px;
+  margin-bottom: 30px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.content-experience > a:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
 .content-experience .job {
   background-color: #021d34;
   padding: 20px;
   margin-bottom: 20px;
   border-left: 4px solid var(--green);
   border-radius: 10px;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 900px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -401,7 +420,9 @@ main {
   overflow: hidden;
   border-left: 4px solid var(--green);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -454,7 +475,9 @@ main {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .content-projects .lists .project .image-a .cover a:hover {
@@ -508,7 +531,9 @@ main {
   padding: 4px 12px;
   font-size: 12px;
   font-weight: 600;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .content-projects .lists .project:hover .tech-stack ul li {
