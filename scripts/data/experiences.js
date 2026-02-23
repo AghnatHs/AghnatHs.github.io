@@ -73,7 +73,7 @@ const experiences = [
     ],
   },
   {
-    title: "Staff of R&T Division | Technical Project Manager",
+    title: "R&T Division | Technical Project Manager",
     company: "Himalkom IPB",
     duration: "Jan 2025 – Dec 2025",
     details: [
@@ -86,7 +86,7 @@ const experiences = [
   },
   {
     title: "Backend Developer",
-    company: "Dinas Lingkungan Hidup Kalsel",
+    company: "Dinas Lingkungan Hidup Kalimanan Selatan",
     duration: "Dec 2024 – Jan 2025",
     details: [
       "Developed the REST API backend for an internal quiz web app using Express.js.",
@@ -102,7 +102,7 @@ const experiences = [
     ],
   },
   {
-    title: "Intern of Research and Technology Division",
+    title: "R&T Division Intern | Backend Developer",
     company: "Himalkom IPB",
     duration: "Oct 2024 – Nov 2024",
     details: [
