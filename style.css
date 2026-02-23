@@ -1,7 +1,7 @@
 :root {
   --bg-color: #0a0a0a;
   --white: #f4f4f5;
-  --primary-color: #1d7fda; /* #00ff88 */
+  --primary-color: #b026ff; /* #00ff88 */
   --card-bg: #111111;
   --border-color: #333333;
   --text-muted: #a1a1aa;
@@ -178,9 +178,20 @@ main {
 }
 
 .content-profile .introduction h1 {
-  font-size: 48px;
-  margin-bottom: 24px;
+  font-size: clamp(12px, 4.5vw, 48px);
+  margin-bottom: 8px;
   line-height: 1.2;
+  white-space: nowrap;
+}
+
+.content-profile .introduction .role-subtitle {
+  font-size: clamp(10px, 3vw, 24px);
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 #hello {
@@ -750,8 +761,8 @@ footer ul li a:hover {
     padding-top: 0;
   }
 
-  .content-profile .introduction h1 {
-    font-size: 36px;
+  .content-profile .introduction {
+    padding: 0 10px;
   }
 
   .title {

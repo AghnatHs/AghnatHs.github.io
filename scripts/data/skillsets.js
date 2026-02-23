@@ -15,14 +15,14 @@ const skillsets = [
     level: "Intermediate",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-    name: "Dart",
-    level: "Intermediate",
-  },
-  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     name: "PHP",
     level: "Intermediate",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+    name: "Golang",
+    level: "Beginner",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",

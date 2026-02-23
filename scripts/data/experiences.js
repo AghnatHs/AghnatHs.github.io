@@ -51,6 +51,7 @@ const experiences = [
       "Express.js",
       "System Analysis",
       "REST APIs",
+      "Applied AI",
     ],
   },
   {
