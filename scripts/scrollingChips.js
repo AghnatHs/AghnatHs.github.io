@@ -8,6 +8,14 @@ function aggregateSkills() {
     });
   }
 
+  // Add from projects
+  if (typeof projects !== "undefined") {
+    projects.forEach((proj) => {
+      if (proj.competency)
+        proj.competency.forEach((comp) => uniqueSkills.add(comp));
+    });
+  }
+
   // Add from skillsets
   if (typeof skillsets !== "undefined") {
     skillsets.forEach((skill) => uniqueSkills.add(skill.name));
@@ -38,7 +46,7 @@ function renderScrollingChips() {
 
   // Get 15 random skills
   const shuffledSkills = shuffleArray([...allSkills]);
-  const selectedSkills = shuffledSkills.slice(0, 15);
+  const selectedSkills = shuffledSkills.slice(0, 25);
 
   // Duplicate the array to create a seamless infinite scroll effect
   const displaySkills = [...selectedSkills, ...selectedSkills];

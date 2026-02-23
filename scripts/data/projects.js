@@ -5,16 +5,7 @@ const projects = [
     title: "Akucuciin",
     description: "Backend and IT ecosystem of Akucuciin",
     associatedWith: null,
-    competency: [
-      "Backend",
-      "Software Development",
-      "Software Architecture",
-      "Payment Integration",
-      "Microservices",
-      "Express.js",
-      "MySQL",
-      "VPS",
-    ],
+    competency: ["Microservices", "Express.js", "MySQL", "Redis"],
   },
   {
     image: "assets/images/project_bacarita.jpeg",
@@ -23,13 +14,11 @@ const projects = [
     description: "Development of Bacarita",
     associatedWith: null,
     competency: [
-      "Backend",
-      "Frontend",
       "Nest JS",
       "TypeScript",
-      "Containerization",
       "MySQL",
-      "VPS (Dokploy)",
+      "Software Deployment",
+      "Applied AI",
     ],
   },
   {
@@ -39,7 +28,6 @@ const projects = [
     description: "Developing new IELTS CBT feature",
     associatedWith: "Associated with Codepanda",
     competency: [
-      "Fullstack",
       "Laravel",
       "MySQL",
       "Server Administration",
@@ -53,7 +41,7 @@ const projects = [
     description:
       "Develop and implement new recipe, recipe calculation, and ingredients module",
     associatedWith: null,
-    competency: ["Backend", "Express", "TypeScript", "PostgreSQL"],
+    competency: ["Express", "TypeScript", "PostgreSQL", "Applied AI"],
   },
   {
     image: "assets/images/project_himalkom_portal.webp",
@@ -61,7 +49,7 @@ const projects = [
     title: "portal.himalkom-ipb.com (2025)",
     description: "Himalkom IPB integrated information system",
     associatedWith: null,
-    competency: ["Fullstack", "Laravel", "MySql"],
+    competency: ["Laravel", "MySql"],
   },
   {
     image: "assets/images/project_himalkom_lp.webp",
@@ -69,7 +57,7 @@ const projects = [
     title: "himalkom-ipb.com (2025)",
     description: "Back-end of himalkom-ipb.com (2025) [api.himalkom-ipb.com]",
     associatedWith: null,
-    competency: ["Backend", "Laravel", "Filamentphp", "MySql"],
+    competency: ["Laravel", "Filamentphp", "MySql"],
   },
   {
     image: "assets/images/project_tesdlhkalsel_backend.webp",
@@ -77,7 +65,7 @@ const projects = [
     title: "tesdlhkalsel.com",
     description: "Back-end of tesdlhkalsel.com",
     associatedWith: null,
-    competency: ["Backend", "Express.js", "MySql"],
+    competency: ["Express.js", "MySql"],
   },
 ];
 

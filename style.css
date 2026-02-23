@@ -1,7 +1,7 @@
 :root {
   --bg-color: #0a0a0a;
   --white: #f4f4f5;
-  --green: #00ff88;
+  --primary-color: #1d7fda; /* #00ff88 */
   --card-bg: #111111;
   --border-color: #333333;
   --text-muted: #a1a1aa;
@@ -87,14 +87,14 @@ header ul li a {
 }
 
 header ul li a:hover {
-  color: var(--green);
+  color: var(--primary-color);
 }
 
 header ul li a::after {
   content: "";
   width: 100%;
   height: 2px;
-  background: var(--green);
+  background: var(--primary-color);
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -155,7 +155,7 @@ main {
   width: 240px;
   height: 240px;
   border: 2px solid var(--white);
-  box-shadow: 8px 8px 0px var(--green);
+  box-shadow: 8px 8px 0px var(--primary-color);
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
@@ -166,7 +166,7 @@ main {
 
 .content-profile .profile-photo:hover {
   transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0px var(--green);
+  box-shadow: 12px 12px 0px var(--primary-color);
 }
 
 .content-profile .introduction {
@@ -184,7 +184,7 @@ main {
 }
 
 #hello {
-  color: var(--green);
+  color: var(--primary-color);
 }
 
 .content-profile .name {
@@ -200,7 +200,7 @@ main {
   left: 0;
   width: 100%;
   height: 12px;
-  background-color: var(--green);
+  background-color: var(--primary-color);
   z-index: -1;
   opacity: 0.5;
 }
@@ -259,10 +259,10 @@ main {
 }
 
 .scrolling-chips .chip:hover {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 2px 2px 0px var(--green);
+  box-shadow: 2px 2px 0px var(--primary-color);
 }
 
 @keyframes scroll-left {
@@ -291,7 +291,7 @@ main {
   left: -60px;
   width: 40px;
   height: 2px;
-  background-color: var(--green);
+  background-color: var(--primary-color);
 }
 
 .title::after {
@@ -301,7 +301,7 @@ main {
   right: -60px;
   width: 40px;
   height: 2px;
-  background-color: var(--green);
+  background-color: var(--primary-color);
 }
 
 /* Two Column Layout */
@@ -349,14 +349,14 @@ main {
 
 .content-experience > a {
   color: var(--bg-color);
-  background-color: var(--green);
+  background-color: var(--primary-color);
   text-decoration: none;
   font-family: "Syne", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 12px 32px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--primary-color);
   margin-bottom: 40px;
   transition: all 0.3s ease;
   box-shadow: 4px 4px 0px var(--white);
@@ -443,8 +443,8 @@ main {
 }
 
 .content-experience .job-skills .skill-tag {
-  background-color: rgba(0, 255, 136, 0.1);
-  color: var(--green);
+  background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+  color: var(--primary-color);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -485,7 +485,7 @@ main {
   left: 0;
   width: 4px;
   height: 100%;
-  background-color: var(--green);
+  background-color: var(--primary-color);
   transform: scaleY(0);
   transition: transform 0.3s ease;
   transform-origin: bottom;
@@ -527,7 +527,7 @@ main {
 
 .content-skillsets .lists .skill .container .skill-level {
   font-size: 12px;
-  color: var(--green);
+  color: var(--primary-color);
   font-family: "Syne", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -566,7 +566,7 @@ main {
   left: 8px;
   width: 100%;
   height: 100%;
-  border: 1px solid var(--green);
+  border: 1px solid var(--primary-color);
   z-index: -1;
   transition: all 0.3s ease;
 }
@@ -578,7 +578,7 @@ main {
 
 .content-projects .lists .project:hover::after {
   transform: translate(8px, 8px);
-  background-color: rgba(0, 255, 136, 0.05);
+  background-color: color-mix(in srgb, var(--primary-color) 5%, transparent);
 }
 
 .content-projects .lists .project .image-a {
@@ -620,13 +620,13 @@ main {
 
 .content-projects .lists .project .image-a .cover a {
   color: var(--bg-color);
-  background-color: var(--green);
+  background-color: var(--primary-color);
   padding: 12px 24px;
   text-decoration: none;
   font-family: "Syne", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  border: 1px solid var(--green);
+  border: 1px solid var(--primary-color);
   transition: all 0.2s ease;
 }
 
@@ -680,8 +680,8 @@ main {
 }
 
 .content-projects .lists .project:hover .tech-stack ul li {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Footer */
@@ -715,7 +715,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: var(--green);
+  color: var(--primary-color);
   transform: translateY(-4px);
 }
 
@@ -815,6 +815,6 @@ footer ul li a:hover {
   }
 
   .content-projects .lists .project .info .external-link-mobile a {
-    color: var(--green);
+    color: var(--primary-color);
   }
 }
