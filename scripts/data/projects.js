@@ -90,7 +90,7 @@ function renderProjects() {
       (project) => `
       <div class="project">
         <div class="image-a">
-          <img src="${project.image}" alt="project1" />
+          <img src="${project.image}" alt="${project.title}" loading="lazy" />
           <div class="cover">
             <a href="${project.link}" target="_blank">See More</a>
           </div>

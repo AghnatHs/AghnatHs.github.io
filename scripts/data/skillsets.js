@@ -112,7 +112,7 @@ function renderSkillSection(containerId, skills) {
     .map(
       (skill) => `
       <div class="skill">
-        <img src="${skill.icon}"${skill.iconStyle ? ` style="${skill.iconStyle}"` : ""} />
+        <img src="${skill.icon}" alt="${skill.name}" loading="lazy"${skill.iconStyle ? ` style="${skill.iconStyle}"` : ""} />
         <div class="container">
           <h2 class="skill-title">${skill.name}</h2>
           ${skill.level ? `<h2 class="skill-level">${skill.level}</h2>` : ""}
