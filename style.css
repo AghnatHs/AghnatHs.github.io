@@ -305,55 +305,88 @@ main {
 }
 
 .content-experience .job {
-  background-color: var(--card-bg);
-  padding: 30px;
-  margin-bottom: 24px;
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--green);
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 24px;
+  margin-bottom: 16px;
   width: 100%;
   max-width: 900px;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
 }
 
 .content-experience .job:hover {
-  transform: translateX(8px);
-  box-shadow: -8px 8px 0px rgba(0, 255, 136, 0.1);
-  border-color: var(--green);
+  background-color: rgba(255, 255, 255, 0.03);
+  transform: none;
+  box-shadow: none;
 }
 
-.content-experience .job-title {
-  font-size: 22px;
-  color: var(--white);
-  margin-bottom: 8px;
-}
-
-.content-experience .job-company {
-  font-size: 16px;
-  color: var(--green);
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  margin-bottom: 8px;
-  text-transform: none;
+.content-experience .job-duration-col {
+  flex: 0 0 150px;
+  padding-top: 4px;
 }
 
 .content-experience .job-duration {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text-muted);
-  margin-bottom: 16px;
-  font-family: "Syne", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.content-experience .job-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-experience .job-title {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.content-experience .job-company {
+  color: var(--white);
+  font-weight: 500;
 }
 
 .content-experience .job-details {
   padding-left: 20px;
   color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .content-experience .job-details li {
   margin-bottom: 8px;
+}
+
+.content-experience .job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.content-experience .job-skills .skill-tag {
+  background-color: rgba(0, 255, 136, 0.1);
+  color: var(--green);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 /* Skillsets Section */
@@ -643,6 +676,17 @@ footer ul li a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .content-experience .job {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .content-experience .job-duration-col {
+    flex: none;
+    padding-top: 0;
+  }
+
   .content-profile .introduction h1 {
     font-size: 36px;
   }
