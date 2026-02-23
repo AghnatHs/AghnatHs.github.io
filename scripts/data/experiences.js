@@ -82,11 +82,7 @@ const experiences = [
       "Developed fullstack internal staff web apps using Laravel, Blade, and Tailwind.",
       "Deployed and maintained all projects using cPanel.",
     ],
-    skills: [
-      "Laravel",
-      "FilamentPHP",
-      "Project Management",
-    ],
+    skills: ["Laravel", "FilamentPHP", "Project Management"],
   },
   {
     title: "Backend Developer",
@@ -114,12 +110,7 @@ const experiences = [
       "Created the database ERD and implemented backend APIs.",
       "Implemented the admin dashboard using FilamentPHP.",
     ],
-    skills: [
-      "Laravel",
-      "SQLite",
-      "FilamentPHP",
-      "Database Design",
-    ],
+    skills: ["Laravel", "SQLite", "FilamentPHP", "Database Design"],
   },
 ];
 
@@ -135,7 +126,8 @@ function renderExperiences() {
           <p class="job-duration">${job.duration}</p>
         </div>
         <div class="job-info-col">
-          <h3 class="job-title">${job.title} · <span class="job-company">${job.company}</span></h3>
+          <h3 class="job-title">${job.title}</h3>
+          <p class="job-company">${job.company}</p>
           <ul class="job-details">
             ${job.details.map((detail) => `<li>${detail}</li>`).join("")}
           </ul>
