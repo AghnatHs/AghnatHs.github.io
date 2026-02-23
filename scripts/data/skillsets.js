@@ -63,10 +63,6 @@ const frameworks = [
 
 const others = [
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
-    name: "SQLite",
-  },
-  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
     name: "MySQL",
   },
@@ -75,16 +71,20 @@ const others = [
     name: "PostgreSQL",
   },
   {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg",
+    name: "MariaDB",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+    name: "SQLite",
+  },
+  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
     name: "Redis",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg",
     name: "Git",
-  },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg",
-    name: "MariaDB",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
