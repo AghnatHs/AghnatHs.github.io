@@ -19,7 +19,7 @@
   <meta property="og:title" content="Aghnat - Backend Developer & Software Engineer" />
   <meta property="og:description"
     content="Computer Science student at IPB University. Experienced in building server-side systems, RESTful APIs, and database design." />
-  <meta property="og:image" content="assets/images/photo-profile-new.jpeg" />
+  <meta property="og:image" content="assets/images/photo-profile-new-2402.webp" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="Aghnat - Backend Developer & Software Engineer" />
   <meta name="twitter:description"
     content="Computer Science student at IPB University. Experienced in building server-side systems, RESTful APIs, and database design." />
-  <meta name="twitter:image" content="assets/images/photo-profile-new.jpeg" />
+  <meta name="twitter:image" content="assets/images/photo-profile-new-2402.webp" />
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#009473" />
@@ -62,7 +62,7 @@
   <main>
     <!-- profile -->
     <div class="content-profile" id="profile">
-      <img class="profile-photo" src="assets/images/photo-profile-new.jpeg" alt="profile" loading="lazy" />
+      <img class="profile-photo" src="assets/images/photo-profile-new-2402.webp" alt="profile" loading="lazy" />
       <div class="introduction">
         <h1>
           <span id="hello">Hello</span>, my name is
@@ -88,30 +88,37 @@
       <!-- <h1 style="position: absolute; right: 25%; top: 30%;">test</h1> -->
     </div>
 
-    <!-- Experience-->
-    <div class="content-experience" id="experience">
-      <h2 class="title">Work Experience</h2>
+    <!-- Two Column Section -->
+    <div class="content-two-column">
+      <!-- Left Column: Skillsets -->
+      <div class="column-left">
+        <!-- skillsets language-->
+        <div class="content-skillsets" id="skillsets">
+          <h2 class="title">Skillsets</h2>
+          <div class="lists" id="skillsets-list"></div>
+        </div>
 
-      <a href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+        <!-- skillsets framework libraries other-->
+        <div class="content-skillsets">
+          <h2 class="title">Framework || Library</h2>
+          <div class="lists" id="frameworks-list"></div>
+        </div>
+        <!-- skillsets other-->
+        <div class="content-skillsets">
+          <h2 class="title">Other</h2>
+          <div class="lists" id="others-list"></div>
+        </div>
+      </div>
 
-      <div id="experience-list"></div>
-    </div>
-
-    <!-- skillsets language-->
-    <div class="content-skillsets" id="skillsets">
-      <h2 class="title">Skillsets</h2>
-      <div class="lists" id="skillsets-list"></div>
-    </div>
-
-    <!-- skillsets framework libraries other-->
-    <div class="content-skillsets">
-      <h2 class="title">Framework || Library</h2>
-      <div class="lists" id="frameworks-list"></div>
-    </div>
-    <!-- skillsets other-->
-    <div class="content-skillsets">
-      <h2 class="title">Other</h2>
-      <div class="lists" id="others-list"></div>
+      <!-- Right Column: Experience -->
+      <div class="column-right">
+        <!-- Experience-->
+        <div class="content-experience" id="experience">
+          <h2 class="title">Work Experience</h2>
+          <a href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+          <div id="experience-list"></div>
+        </div>
+      </div>
     </div>
 
     <!-- projects -->
