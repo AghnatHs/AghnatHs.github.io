@@ -15,14 +15,14 @@ const skillsets = [
     level: "Intermediate",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-    name: "Dart",
-    level: "Intermediate",
-  },
-  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     name: "PHP",
     level: "Intermediate",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+    name: "Golang",
+    level: "Beginner",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
@@ -63,10 +63,6 @@ const frameworks = [
 
 const others = [
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
-    name: "SQLite",
-  },
-  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
     name: "MySQL",
   },
@@ -75,16 +71,20 @@ const others = [
     name: "PostgreSQL",
   },
   {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg",
+    name: "MariaDB",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+    name: "SQLite",
+  },
+  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
     name: "Redis",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg",
     name: "Git",
-  },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg",
-    name: "MariaDB",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
@@ -112,7 +112,7 @@ function renderSkillSection(containerId, skills) {
     .map(
       (skill) => `
       <div class="skill">
-        <img src="${skill.icon}"${skill.iconStyle ? ` style="${skill.iconStyle}"` : ""} />
+        <img src="${skill.icon}" alt="${skill.name}" loading="lazy"${skill.iconStyle ? ` style="${skill.iconStyle}"` : ""} />
         <div class="container">
           <h2 class="skill-title">${skill.name}</h2>
           ${skill.level ? `<h2 class="skill-level">${skill.level}</h2>` : ""}

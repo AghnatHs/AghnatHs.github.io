@@ -19,7 +19,7 @@
   <meta property="og:title" content="Aghnat - Backend Developer & Software Engineer" />
   <meta property="og:description"
     content="Computer Science student at IPB University. Experienced in building server-side systems, RESTful APIs, and database design." />
-  <meta property="og:image" content="assets/images/photo-profile-new.jpeg" />
+  <meta property="og:image" content="assets/images/photo-profile-new-2402.webp" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
@@ -27,14 +27,16 @@
   <meta name="twitter:title" content="Aghnat - Backend Developer & Software Engineer" />
   <meta name="twitter:description"
     content="Computer Science student at IPB University. Experienced in building server-side systems, RESTful APIs, and database design." />
-  <meta name="twitter:image" content="assets/images/photo-profile-new.jpeg" />
+  <meta name="twitter:image" content="assets/images/photo-profile-new-2402.webp" />
 
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#009473" />
+  <meta name="theme-color" content="#00ff88" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <script src="https://kit.fontawesome.com/9c2dbccb49.js" crossorigin="anonymous"></script>
@@ -60,12 +62,12 @@
   <main>
     <!-- profile -->
     <div class="content-profile" id="profile">
-      <img class="profile-photo" src="assets/images/photo-profile-new.jpeg" alt="profile" />
+      <img class="profile-photo" src="assets/images/photo-profile-new-2402.webp" alt="profile" loading="lazy" />
       <div class="introduction">
         <h1>
-          <span id="hello">Hi</span>, my name is
-          <span class="name">Aghnat</span>
+          <span id="hello">Hello</span>, my name is <span class="name">Aghnat</span>
         </h1>
+        <h2 class="role-subtitle">SWE  Cloud  AI</h2>
         <p>
           <span id="year"></span> year Computer Science student at IPB
           University.<br /><br />
@@ -82,34 +84,44 @@
           needed, prioritizing strong engineering fundamentals over
           framework-specific knowledge.
         </p>
+        <div class="scrolling-chips-container">
+          <div class="scrolling-chips" id="scrolling-chips"></div>
+        </div>
       </div>
       <!-- <h1 style="position: absolute; right: 25%; top: 30%;">test</h1> -->
     </div>
 
-    <!-- Experience-->
-    <div class="content-experience" id="experience">
-      <h2 class="title">Work Experience</h2>
+    <!-- Two Column Section -->
+    <div class="content-two-column">
+      <!-- Left Column: Skillsets -->
+      <div class="column-left">
+        <!-- skillsets language-->
+        <div class="content-skillsets" id="skillsets">
+          <h2 class="title">Skillsets</h2>
+          <div class="lists" id="skillsets-list"></div>
+        </div>
 
-      <a href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+        <!-- skillsets framework libraries other-->
+        <div class="content-skillsets">
+          <h2 class="title">Framework</h2>
+          <div class="lists" id="frameworks-list"></div>
+        </div>
+        <!-- skillsets other-->
+        <div class="content-skillsets">
+          <h2 class="title">Other</h2>
+          <div class="lists" id="others-list"></div>
+        </div>
+      </div>
 
-      <div id="experience-list"></div>
-    </div>
-
-    <!-- skillsets language-->
-    <div class="content-skillsets" id="skillsets">
-      <h2 class="title">Skillsets</h2>
-      <div class="lists" id="skillsets-list"></div>
-    </div>
-
-    <!-- skillsets framework libraries other-->
-    <div class="content-skillsets">
-      <h2 class="title">Framework || Library</h2>
-      <div class="lists" id="frameworks-list"></div>
-    </div>
-    <!-- skillsets other-->
-    <div class="content-skillsets">
-      <h2 class="title">Other</h2>
-      <div class="lists" id="others-list"></div>
+      <!-- Right Column: Experience -->
+      <div class="column-right">
+        <!-- Experience-->
+        <div class="content-experience" id="experience">
+          <h2 class="title">Work Experience</h2>
+          <a href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+          <div id="experience-list"></div>
+        </div>
+      </div>
     </div>
 
     <!-- projects -->
@@ -136,10 +148,10 @@
 </body>
 <script src="scripts/transparentHeader.js"></script>
 <script src="scripts/yearAtUniv.js"></script>
-<script src="scripts/hello.js"></script>
 <script src="scripts/responsiveMenu.js"></script>
 <script src="scripts/data/experiences.js"></script>
 <script src="scripts/data/skillsets.js"></script>
 <script src="scripts/data/projects.js"></script>
+<script src="scripts/scrollingChips.js"></script>
 
 </html>
