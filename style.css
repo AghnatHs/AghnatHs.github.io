@@ -358,6 +358,43 @@ main {
   align-items: center;
 }
 
+.content-experience .company-group {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.content-experience .company-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 24px 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-experience .company-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: "Syne", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content-experience .company-link:hover {
+  text-decoration: underline;
+}
+
+.content-experience .company-role-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .content-experience > a {
   color: var(--bg-color);
   background-color: var(--primary-color);
@@ -546,6 +583,144 @@ main {
   font-family: "Syne", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Work Timeline Section */
+.content-timeline {
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+}
+
+.timeline-scroll {
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.timeline-scroll::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+
+.timeline-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+.timeline-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-header,
+.timeline-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.timeline-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-header-label {
+  border-right: 1px solid var(--border-color);
+  min-height: 56px;
+}
+
+.timeline-axis {
+  position: relative;
+  min-height: 56px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-year {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px dashed var(--border-color);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-row:last-child {
+  border-bottom: none;
+}
+
+.timeline-label {
+  padding: 16px;
+  border-right: 1px solid var(--border-color);
+}
+
+.timeline-role {
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  color: var(--primary-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-company-link {
+  text-decoration: none;
+}
+
+.timeline-company-link:hover {
+  text-decoration: underline;
+}
+
+.timeline-row-track {
+  position: relative;
+  min-height: 72px;
+}
+
+.timeline-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 34px;
+  border: 1px solid var(--primary-color);
+  background-color: color-mix(in srgb, var(--primary-color) 12%, transparent);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.timeline-bar span {
+  font-size: 11px;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Projects Section */
@@ -754,6 +929,13 @@ footer ul li a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .content-experience .company-heading {
+    margin: 0 16px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
   .content-experience .job {
     flex-direction: column;
     gap: 12px;
@@ -831,5 +1013,32 @@ footer ul li a:hover {
 
   .content-projects .lists .project .info .external-link-mobile a {
     color: var(--primary-color);
+  }
+
+  .timeline-header,
+  .timeline-row {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .timeline-label {
+    padding: 10px;
+  }
+
+  .timeline-role {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .timeline-company {
+    font-size: 11px;
+  }
+
+  .timeline-bar {
+    height: 28px;
+    padding: 0 8px;
+  }
+
+  .timeline-bar span {
+    font-size: 10px;
   }
 }

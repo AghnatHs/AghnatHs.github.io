@@ -114,31 +114,211 @@ const experiences = [
   },
 ];
 
+function groupExperiencesByCompany(data) {
+  const grouped = [];
+  const groupMap = new Map();
+
+  data.forEach((job) => {
+    if (!groupMap.has(job.company)) {
+      const companyGroup = {
+        company: job.company,
+        roles: [],
+      };
+
+      groupMap.set(job.company, companyGroup);
+      grouped.push(companyGroup);
+    }
+
+    groupMap.get(job.company).roles.push(job);
+  });
+
+  return grouped;
+}
+
+const monthMap = {
+  Jan: 0,
+  Feb: 1,
+  Mar: 2,
+  Apr: 3,
+  May: 4,
+  Jun: 5,
+  Jul: 6,
+  Aug: 7,
+  Sep: 8,
+  Oct: 9,
+  Nov: 10,
+  Dec: 11,
+};
+
+function parseMonthYear(value) {
+  const [monthText, yearText] = value.trim().split(/\s+/);
+  const month = monthMap[monthText];
+  const year = Number(yearText);
+
+  if (month === undefined || Number.isNaN(year)) return null;
+  return { month, year };
+}
+
+function parseDuration(duration) {
+  const parts = duration.split("–").map((item) => item.trim());
+  if (parts.length !== 2) return null;
+
+  const start = parseMonthYear(parts[0]);
+  const end =
+    parts[1] === "Present"
+      ? { month: new Date().getMonth(), year: new Date().getFullYear() }
+      : parseMonthYear(parts[1]);
+
+  if (!start || !end) return null;
+  return { start, end };
+}
+
+function monthIndex(date) {
+  return date.year * 12 + date.month;
+}
+
+function monthDiff(start, end) {
+  return monthIndex(end) - monthIndex(start);
+}
+
 function renderExperiences() {
   const container = document.getElementById("experience-list");
   if (!container) return;
 
-  container.innerHTML = experiences
+  const groupedExperiences = groupExperiencesByCompany(experiences);
+
+  container.innerHTML = groupedExperiences
     .map(
-      (job) => `
-      <div class="job">
-        <div class="job-duration-col">
-          <p class="job-duration">${job.duration}</p>
+      (companyGroup) => `
+      <div class="company-group">
+        <div class="company-heading">
+          <p class="company-link">
+            ${companyGroup.company}
+          </p>
+          <p class="company-role-count">${companyGroup.roles.length} role${companyGroup.roles.length > 1 ? "s" : ""}</p>
         </div>
-        <div class="job-info-col">
-          <h3 class="job-title">${job.title}</h3>
-          <p class="job-company">${job.company}</p>
-          <ul class="job-details">
-            ${job.details.map((detail) => `<li>${detail}</li>`).join("")}
-          </ul>
-          <div class="job-skills">
-            ${job.skills.map((skill) => `<span class="skill-tag">${skill}</span>`).join("")}
+
+        ${companyGroup.roles
+          .map(
+            (job) => `
+          <div class="job">
+            <div class="job-duration-col">
+              <p class="job-duration">${job.duration}</p>
+            </div>
+            <div class="job-info-col">
+              <h3 class="job-title">${job.title}</h3>
+              <ul class="job-details">
+                ${job.details.map((detail) => `<li>${detail}</li>`).join("")}
+              </ul>
+              <div class="job-skills">
+                ${job.skills.map((skill) => `<span class="skill-tag">${skill}</span>`).join("")}
+              </div>
+            </div>
           </div>
-        </div>
+
+        `,
+          )
+          .join("")}
       </div>
     `,
     )
     .join("");
 }
 
+function renderExperienceTimeline() {
+  const container = document.getElementById("experience-timeline-list");
+  if (!container) return;
+
+  const timelineData = experiences
+    .map((job) => {
+      const range = parseDuration(job.duration);
+      if (!range) return null;
+
+      return {
+        ...job,
+        start: range.start,
+        end: range.end,
+      };
+    })
+    .filter(Boolean);
+
+  if (!timelineData.length) {
+    container.innerHTML = "";
+    return;
+  }
+
+  const timelineStart = timelineData.reduce(
+    (acc, job) => (monthIndex(job.start) < monthIndex(acc) ? job.start : acc),
+    timelineData[0].start,
+  );
+
+  const timelineEnd = timelineData.reduce(
+    (acc, job) => (monthIndex(job.end) > monthIndex(acc) ? job.end : acc),
+    timelineData[0].end,
+  );
+
+  const totalMonths = monthDiff(timelineStart, timelineEnd) + 1;
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const monthUnit = isMobile ? 18 : 36;
+  const labelWidth = isMobile ? 180 : 280;
+  const minTrackWidth = isMobile ? 320 : 680;
+  const trackWidth = Math.max(totalMonths * monthUnit, minTrackWidth);
+
+  const years = [];
+  for (let year = timelineStart.year; year <= timelineEnd.year; year++) {
+    const left = Math.max(
+      0,
+      monthDiff(timelineStart, {
+        month: 0,
+        year,
+      }),
+    );
+
+    if (left >= totalMonths) continue;
+
+    years.push(
+      `<div class="timeline-year" style="left:${left * monthUnit}px">${year}</div>`,
+    );
+  }
+
+  container.innerHTML = `
+    <div class="timeline-grid" style="min-width:${labelWidth + trackWidth}px">
+      <div class="timeline-header">
+        <div class="timeline-header-label"></div>
+        <div class="timeline-axis" style="width:${trackWidth}px">
+          ${years.join("")}
+        </div>
+      </div>
+
+      ${timelineData
+        .map((job) => {
+          const left = monthDiff(timelineStart, job.start) * monthUnit;
+          const width = Math.max(
+            (monthDiff(job.start, job.end) + 1) * monthUnit,
+            70,
+          );
+
+          return `
+            <div class="timeline-row">
+              <div class="timeline-label">
+                <h3 class="timeline-role">${job.title}</h3>
+                <p class="timeline-company">${job.company}</p>
+              </div>
+
+              <div class="timeline-row-track" style="width:${trackWidth}px">
+                <div class="timeline-bar" style="left:${left}px; width:${width}px;">
+                  <span>${job.duration}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
 renderExperiences();
+renderExperienceTimeline();
+
+window.addEventListener("resize", renderExperienceTimeline);
