@@ -150,6 +150,21 @@ const monthMap = {
   Dec: 11,
 };
 
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
 function parseMonthYear(value) {
   const [monthText, yearText] = value.trim().split(/\s+/);
   const month = monthMap[monthText];
@@ -171,6 +186,11 @@ function parseDuration(duration) {
 
   if (!start || !end) return null;
   return { start, end };
+}
+
+function isCurrentExperience(duration) {
+  const parts = duration.split("–").map((item) => item.trim());
+  return parts.length === 2 && parts[1] === "Present";
 }
 
 function monthIndex(date) {
@@ -201,7 +221,7 @@ function renderExperiences() {
         ${companyGroup.roles
           .map(
             (job) => `
-          <div class="job">
+          <div class="job ${isCurrentExperience(job.duration) ? "is-current" : "is-past"}">
             <div class="job-duration-col">
               <p class="job-duration">${job.duration}</p>
             </div>
@@ -238,6 +258,7 @@ function renderExperienceTimeline() {
         ...job,
         start: range.start,
         end: range.end,
+        isCurrent: isCurrentExperience(job.duration),
       };
     })
     .filter(Boolean);
@@ -264,21 +285,22 @@ function renderExperienceTimeline() {
   const minTrackWidth = isMobile ? 320 : 680;
   const trackWidth = Math.max(totalMonths * monthUnit, minTrackWidth);
 
-  const years = [];
-  for (let year = timelineStart.year; year <= timelineEnd.year; year++) {
-    const left = Math.max(
-      0,
-      monthDiff(timelineStart, {
-        month: 0,
-        year,
-      }),
-    );
+  const monthMarkers = [];
+  for (let index = 0; index < totalMonths; index++) {
+    const absoluteMonth = timelineStart.month + index;
+    const month = absoluteMonth % 12;
+    const year = timelineStart.year + Math.floor(absoluteMonth / 12);
+    const isYearStart = month === 0;
+    const monthLabel = isMobile
+      ? monthNames[month].slice(0, 1)
+      : monthNames[month];
 
-    if (left >= totalMonths) continue;
-
-    years.push(
-      `<div class="timeline-year" style="left:${left * monthUnit}px">${year}</div>`,
-    );
+    monthMarkers.push(`
+      <div class="timeline-month ${isYearStart ? "is-year-start" : ""}" style="left:${index * monthUnit}px">
+        <span class="timeline-month-label">${monthLabel}</span>
+        ${isYearStart ? `<span class="timeline-year-label">${year}</span>` : ""}
+      </div>
+    `);
   }
 
   container.innerHTML = `
@@ -286,7 +308,7 @@ function renderExperienceTimeline() {
       <div class="timeline-header">
         <div class="timeline-header-label"></div>
         <div class="timeline-axis" style="width:${trackWidth}px">
-          ${years.join("")}
+          ${monthMarkers.join("")}
         </div>
       </div>
 
@@ -306,7 +328,7 @@ function renderExperienceTimeline() {
               </div>
 
               <div class="timeline-row-track" style="width:${trackWidth}px">
-                <div class="timeline-bar" style="left:${left}px; width:${width}px;">
+                <div class="timeline-bar ${job.isCurrent ? "is-current" : "is-past"}" style="left:${left}px; width:${width}px;">
                   <span>${job.duration}</span>
                 </div>
               </div>

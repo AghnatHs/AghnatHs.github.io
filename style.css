@@ -2,6 +2,7 @@
   --bg-color: #0a0a0a;
   --white: #f4f4f5;
   --primary-color: #26e6ff; /* #00ff88 */
+  --secondary-color: #a1a1aa;
   --card-bg: #111111;
   --border-color: #333333;
   --text-muted: #a1a1aa;
@@ -504,6 +505,15 @@ main {
   font-weight: 500;
 }
 
+.content-experience .job.is-past .job-title {
+  color: var(--secondary-color);
+}
+
+.content-experience .job.is-past .job-skills .skill-tag {
+  background-color: color-mix(in srgb, var(--secondary-color) 12%, transparent);
+  color: var(--secondary-color);
+}
+
 /* Skillsets Section */
 .content-skillsets {
   display: flex;
@@ -642,18 +652,36 @@ main {
 
 .timeline-axis {
   position: relative;
-  min-height: 56px;
+  min-height: 70px;
   border-bottom: 1px solid var(--border-color);
 }
 
-.timeline-year {
+.timeline-month {
   position: absolute;
   top: 0;
   bottom: 0;
-  border-left: 1px dashed var(--border-color);
+  border-left: 1px solid
+    color-mix(in srgb, var(--border-color) 75%, transparent);
   display: flex;
-  align-items: center;
-  padding-left: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 6px 0 8px 6px;
+}
+
+.timeline-month.is-year-start {
+  border-left: 1px dashed var(--border-color);
+}
+
+.timeline-month-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: "Syne", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.timeline-year-label {
   font-size: 12px;
   color: var(--text-muted);
   font-family: "Syne", sans-serif;
@@ -706,12 +734,20 @@ main {
   top: 50%;
   transform: translateY(-50%);
   height: 34px;
-  border: 1px solid var(--primary-color);
-  background-color: color-mix(in srgb, var(--primary-color) 12%, transparent);
+  border: 1px solid var(--timeline-color, var(--primary-color));
+  background-color: color-mix(
+    in srgb,
+    var(--timeline-color, var(--primary-color)) 12%,
+    transparent
+  );
   display: flex;
   align-items: center;
   padding: 0 10px;
   white-space: nowrap;
+}
+
+.timeline-bar.is-past {
+  --timeline-color: var(--secondary-color);
 }
 
 .timeline-bar span {
@@ -1039,6 +1075,23 @@ footer ul li a:hover {
   }
 
   .timeline-bar span {
+    font-size: 10px;
+  }
+
+  .timeline-axis {
+    min-height: 64px;
+  }
+
+  .timeline-month {
+    padding-left: 4px;
+  }
+
+  .timeline-month-label {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-year-label {
     font-size: 10px;
   }
 }
