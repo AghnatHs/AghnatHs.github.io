@@ -227,6 +227,7 @@ function renderExperiences() {
             </div>
             <div class="job-info-col">
               <h3 class="job-title">${job.title}</h3>
+              ${isCurrentExperience(job.duration) ? '<p class="job-status-indicator">Currently Active</p>' : ""}
               <ul class="job-details">
                 ${job.details.map((detail) => `<li>${detail}</li>`).join("")}
               </ul>
