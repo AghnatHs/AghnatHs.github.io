@@ -17,6 +17,7 @@ const experiences = [
       "MySQL",
       "System Analysis",
       "Business Analysis",
+      "Business Process Improvement",
       "Database Design",
       "REST APIs",
     ],
