@@ -1,5 +1,27 @@
 const experiences = [
   {
+    title: "Software Engineer - ERP",
+    company: "Kodekita",
+    duration: "Jan 2026 – Present",
+    details: [
+      "Client: BandungSport, a textile selling company in Bekasi.",
+      "Analyze existing business processes and identify opportunities for digitalization and improvement.",
+      "Develop ERP system for textile selling company (BandungSport) using NestJS and MySQL.",
+      "Design database schemas and RESTful APIs for procurement, warehouse, and sales modules.",
+      "Collaborate with cross-functional teams to gather requirements and deliver scalable backend solutions.",
+      "Collaborate with frontend developers to integrate APIs and optimize performance.",
+    ],
+    skills: [
+      "Nest JS",
+      "TypeScript",
+      "MySQL",
+      "System Analysis",
+      "Business Analysis",
+      "Database Design",
+      "REST APIs",
+    ],
+  },
+  {
     title: "Software Engineer",
     company: "Akucuciin",
     duration: "Mar 2025 – Present",
