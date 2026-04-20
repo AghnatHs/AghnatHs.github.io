@@ -1,11 +1,19 @@
 const skillsets = [
   {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    name: "Java",
+  },
+  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     name: "TypeScript",
   },
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+    name: "Golang",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+    name: "C#",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -14,10 +22,6 @@ const skillsets = [
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     name: "PHP",
-  },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
-    name: "Golang",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
@@ -31,11 +35,6 @@ const skillsets = [
 
 const frameworks = [
   {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg",
-    iconStyle: "filter: brightness(0) invert(1)",
-    name: "ExpressJS",
-  },
-  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
     name: "NestJS",
   },
@@ -47,6 +46,11 @@ const frameworks = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
     iconStyle: "filter: brightness(0) invert(1)",
     name: "Laravel",
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg",
+    iconStyle: "filter: brightness(0) invert(1)",
+    name: "ExpressJS",
   },
 ];
 
