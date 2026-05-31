@@ -57,7 +57,7 @@ const experiences = [
   {
     title: "Software Developer",
     company: "Codepanda",
-    duration: "Feb 2025 – Present",
+    duration: "Feb 2025 – May 2026",
     details: [
       "Developed fullstack applications, including the EnglishPeriod IELTS CBT new feature.",
       "Led potential clients to use company services.",
