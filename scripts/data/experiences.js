@@ -33,7 +33,7 @@ const experiences = [
   {
     title: "Software Engineer - ERP",
     company: "Kodekita",
-    duration: "Jan 2026 – Present",
+    duration: "Jan 2026 – May 2026",
     details: [
       "Client: BandungSport, a textile selling company in Bekasi.",
       "Analyze existing business processes and identify opportunities for digitalization and improvement.",
