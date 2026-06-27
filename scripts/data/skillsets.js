@@ -44,12 +44,10 @@ const frameworks = [
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    iconStyle: "filter: brightness(0) invert(1)",
     name: "Laravel",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg",
-    iconStyle: "filter: brightness(0) invert(1)",
     name: "ExpressJS",
   },
 ];
