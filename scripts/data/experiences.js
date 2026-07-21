@@ -2,7 +2,7 @@ const experiences = [
   {
     title: "Software Engineer (Backend) - Joint Project",
     company: "Akucuciin",
-    duration: "Apr 2026 – Present",
+    duration: "Apr 2026 - Jul 2026",
     details: [
       "Primary Stack: Spring Boot, Thymeleaf, Spring Security, PSQL, Redis",
       "Joint project with Botani Laundry by IPB Convention Hotel",
