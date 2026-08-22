@@ -30,18 +30,13 @@
   <meta name="twitter:image" content="assets/images/photo-profile-new-2402.webp" />
 
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#f6f8fa" />
+  <meta name="theme-color" content="#f5f5f5" />
 
   <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 512%22><path fill=%22%231f2328%22 d=%22M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z%22/></svg>"
     type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <script src="https://kit.fontawesome.com/9c2dbccb49.js" crossorigin="anonymous"></script>
@@ -49,7 +44,23 @@
 
 <body>
   <header id="header">
-    <i class="fa-solid fa-code" style="color: #59636e; scale: 1.5" id="logo"></i>
+    <div class="header-left">
+      <button id="logo" class="app-launcher" aria-label="App launcher">
+        <i class="fa-solid fa-table-cells"></i>
+      </button>
+      <span class="wordmark">Aghnat Hasya</span>
+      <span class="breadcrumb-sep">|</span>
+      <span class="breadcrumb">Portfolio</span>
+    </div>
+    <div class="header-right">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </div>
+      <button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+      <button class="icon-btn" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+      <div class="avatar" title="Aghnat Hasya">AH</div>
+    </div>
     <ul id="sidemenu">
       <li>
         <a href="https://www.linkedin.com/in/aghnathasya/">See More @ Linkedin</a>
@@ -59,31 +70,44 @@
       <li><a href="#skillsets">Skillsets</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <i class="fas fa-regular fa-circle-xmark" style="color: #59636e" onclick="closemenu()"></i>
+      <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
     </ul>
-    <i class="fas fa-solid fa-bars" style="color: #1f2328" onclick="openmenu()"></i>
+    <i class="fa-solid fa-bars menu-toggle" onclick="openmenu()"></i>
   </header>
+
+  <nav class="nav-rail" aria-label="Primary">
+    <a href="#profile" class="nav-item" data-tooltip="Profile"><i class="fa-solid fa-user"></i></a>
+    <a href="#experience" class="nav-item" data-tooltip="Work Experience"><i class="fa-solid fa-briefcase"></i></a>
+    <a href="#skillsets" class="nav-item" data-tooltip="Skillsets"><i class="fa-solid fa-wrench"></i></a>
+    <a href="#projects" class="nav-item" data-tooltip="Projects"><i class="fa-solid fa-diagram-project"></i></a>
+    <a href="#contact" class="nav-item" data-tooltip="Contact"><i class="fa-solid fa-envelope"></i></a>
+    <div class="nav-area-tile" title="Aghnat Hasya">AH</div>
+  </nav>
 
   <main>
     <!-- profile -->
     <div class="content-profile" id="profile">
-      <img class="profile-photo" src="assets/images/photo-profile-new-2402.webp" alt="profile" loading="lazy" />
-      <div class="introduction">
-        <h1>
-          <span id="hello">Hello</span>, my name is <span class="name">Aghnat</span>
-        </h1>
-        <h2 class="role-subtitle">SWE Cloud AI</h2>
-        <p>
-          <span id="year"></span> year CS student
-          and part timing doing Software Engineer specialized in backend, server side and some little IT infrastructure.
-          Experienced building production softwares, database design, system analysis, business analysis, and cross-team
-          integration.
-        </p>
-        <div class="scrolling-chips-container">
-          <div class="scrolling-chips" id="scrolling-chips"></div>
+      <div class="profile-card">
+        <img class="profile-photo" src="assets/images/photo-profile-new-2402.webp" alt="profile" loading="lazy" />
+        <div class="introduction">
+          <h1 class="profile-name">Aghnat Hasya</h1>
+          <div class="profile-badges">
+            <span class="badge badge-info">SWE Cloud AI</span>
+            <span class="badge badge-success"><span class="badge-dot"></span>Active</span>
+          </div>
+          <p class="profile-intro">
+            <span id="year"></span> year CS student
+            and part timing doing Software Engineer specialized in backend, server side and some little IT
+            infrastructure.
+            Experienced building production softwares, database design, system analysis, business analysis, and
+            cross-team
+            integration.
+          </p>
+          <div class="scrolling-chips-container">
+            <div class="scrolling-chips" id="scrolling-chips"></div>
+          </div>
         </div>
       </div>
-      <!-- <h1 style="position: absolute; right: 25%; top: 30%;">test</h1> -->
     </div>
 
     <!-- Two Column Section -->
@@ -112,8 +136,10 @@
       <div class="column-right">
         <!-- Experience-->
         <div class="content-experience" id="experience">
-          <h2 class="title">Work Experience</h2>
-          <a href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+          <div class="section-header">
+            <h2 class="title">Work Experience</h2>
+            <a class="btn-primary" href="https://www.linkedin.com/in/aghnathasya/">See More</a>
+          </div>
           <div id="experience-list"></div>
         </div>
       </div>
@@ -135,27 +161,53 @@
   </main>
 
   <footer id="contact">
-    <h3>Contact Me !</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/AghnatHs" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/aghnathasya/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/natt.hsy/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-      </li>
-    </ul>
-    <p class="footer-note">build with vanilla html, css, and js</p>
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <h3>Contact Me !</h3>
+        <p class="footer-note">build with vanilla html, css, and js</p>
+      </div>
+      <ul>
+        <li>
+          <a href="https://github.com/AghnatHs" target="_blank" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/aghnathasya/" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/natt.hsy/" target="_blank" aria-label="Instagram"><i
+              class="fa-brands fa-square-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
   </footer>
-</body>
-<script src="scripts/transparentHeader.js"></script>
-<script src="scripts/yearAtUniv.js"></script>
-<script src="scripts/responsiveMenu.js"></script>
-<script src="scripts/data/experiences.js"></script>
-<script src="scripts/data/skillsets.js"></script>
-<script src="scripts/data/projects.js"></script>
-<script src="scripts/scrollingChips.js"></script>
+
+  <script>
+    (function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll(".nav-rail .nav-item"));
+      var byId = {};
+      items.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+      if (!("IntersectionObserver" in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          items.forEach(function (a) { a.classList.remove("active"); });
+          var link = byId[entry.target.id];
+          if (link) link.classList.add("active");
+        });
+      }, { rootMargin: "-30% 0px -60% 0px" });
+      Object.keys(byId).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) io.observe(el);
+      });
+    })();
+  </script>
+  <script src="scripts/yearAtUniv.js"></script>
+  <script src="scripts/responsiveMenu.js"></script>
+  <script src="scripts/data/experiences.js"></script>
+  <script src="scripts/data/skillsets.js"></script>
+  <script src="scripts/data/projects.js"></script>
+  <script src="scripts/scrollingChips.js"></script>
 
 </html>
