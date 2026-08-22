@@ -1,5 +1,25 @@
 const experiences = [
   {
+    title: "IT Developer Intern",
+    company: "Soechi Group (PT. Soechi Lines Tbk)",
+    duration: "Aug 2026 – Present",
+    details: [
+      "Improve IT cloud infrastructure CI/CD to use Dokploy (self hosted PaaS) for 4 staging deployments.",
+      "Develop a new Inventory Management System for subsidiary company  using Bun, Hono, React, and Typescript.",
+    ],
+    skills: [
+      "IT Infrastructure",
+      "CI/CD",
+      "Dokploy",
+      "Bun",
+      "Hono",
+      "React",
+      "Typescript",
+      "Docker",
+      "System Analysis",
+    ],
+  },
+  {
     title: "Software Engineer (Backend) - Joint Project",
     company: "Akucuciin",
     duration: "Apr 2026 - Jul 2026",
